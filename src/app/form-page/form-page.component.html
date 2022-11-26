@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="row">
+    <h1>Fill the form!</h1>
+    <hr />
+    <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+      <div id="user-data">
+        <div class="form-group">
+          <label for="email">Email:</label><br />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            ngModel
+            class="form-control"
+          />
+          <br />
+          <label for="my-dropdown">Subscriptions</label>
+          <div id="myDropdown" class="dropdown-content">
+            <select
+              class="form-control"
+              id="options"
+              name="drop-down"
+              ngModel
+              id="options"
+            >
+              <option value="Basic">Basic</option>
+              <option value="Advanced" [defaultSelected]="true">
+                Advanced
+              </option>
+              <option value="Pro">Pro</option>
+            </select>
+          </div>
+          <label for="password">Password:</label><br />
+          <input
+            type="email"
+            id="email"
+            name="password"
+            ngModel
+            class="form-control"
+            value=""
+          />
+          <br />
+          <br />
+          <button class="btn btn-primary" type="submit">Submit</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
